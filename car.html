@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .road{
+            background-image: url(/img/road.jpeg);
+            height: 800px;
+            width: 2100px;
+            position: relative;
+        }
+        .car_right{
+            background-image: url(/img/car_right-removebg-preview.png);
+            top: 80px;
+            animation-name: speed;
+           
+        }
+        .car_left{
+            background-image: url(/img/car_left-removebg-preview.png);
+            top: 185px;
+            right: 100px;
+            animation-name: speedleft;
+         }
+         .common{
+            background-size: cover;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+         }
+         .car_right_1{
+            background-image: url(/img/car_right-removebg-preview.png);
+          top: 355px;
+          animation-name: sai;
+         }
+         .car_left_1{
+            background-image: url(/img/car_left-removebg-preview.png);
+            right: 100px;
+            top: 430px;
+            animation-name: sai_2;
+         }
+
+         @keyframes speed {
+            0%{
+               transform: translateX(0px);
+            }
+            100%{
+              transform: translateX(2100px);
+            }
+         }
+         @keyframes speedleft {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-2100px);
+                
+            }
+         }
+         @keyframes car_right_1 {
+            0%{
+               transform: translateX(0px);
+            }
+            100%{
+              transform: translateX(2100px);
+            }
+         }
+         @keyframes sai {
+            0%{
+               transform: translateX(0px);
+            }
+            100%{
+              transform: translateX(2100px);
+            }
+         }
+         @keyframes sai_2 {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-2100px);
+                
+            }
+         }
+    </style>
+</head>
+<body>
+    <div class="road ">
+        <div class="car_right common" ></div>
+        <div class="car_left common"></div>
+        <div class="car_right_1 common"></div>
+        <div class="car_left_1 common"></div>
+    </div>
+</body>
+</html>
